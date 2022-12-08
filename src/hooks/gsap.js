@@ -1,4 +1,4 @@
-// Creating custom hook
+// Creating custom hook for hero section
 import { useEffect } from "react";
 import gsap, { Expo } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -23,6 +23,31 @@ export const useGsapShutterUnveil = (item, delay = 0, trigger) => {
           trigger: trigger.current,
           toggleActions: "play reverse play reverse",
         },
+      }
+    );
+  }, []);
+};
+
+// Creating custom hook for navbar
+export const useGsapDownStagger = (items, delay = 0) => {
+  useEffect(() => {
+    // creating element
+    const el = items.map((item) => item.current);
+
+    // creating twin
+    gsap.fromTo(
+      el,
+      {
+        y: "-100%",
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1.2, // restricted duration
+        stagger: 0.1, // stagger delay:comes one after another
+        ease: Expo.easeInOut, // timing function
+        delay: delay,
       }
     );
   }, []);

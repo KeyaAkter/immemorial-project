@@ -2,10 +2,12 @@ import { useRef } from "react";
 import { useGsapShutterUnveil } from "../hooks/gsap";
 
 const Hero = () => {
+  // Creating Reference
   const heroRef = useRef(null);
   const shutter1 = useRef(null);
   const shutter2 = useRef(null);
 
+  // Calling custom hooks
   useGsapShutterUnveil(shutter1, 0, heroRef);
   useGsapShutterUnveil(shutter2, 0.2, heroRef);
 
