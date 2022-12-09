@@ -1,13 +1,13 @@
-// Creating custom hook for hero section
+// Creating custom hook for animating hero texts
 import { useEffect } from "react";
 import gsap, { Expo } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger); // registering plugin
-// must be named export
-export const useGsapShutterUnveil = (item, delay = 0, trigger) => {
+
+export const useGsapShutterUnveil = (item, delay = 0, trig) => {
   useEffect(() => {
-    const element = item.current; // html element
+    const element = item.current;
 
     gsap.fromTo(
       element,
@@ -20,7 +20,7 @@ export const useGsapShutterUnveil = (item, delay = 0, trigger) => {
         ease: Expo.easeInOut,
         delay: delay,
         scrollTrigger: {
-          trigger: trigger.current,
+          trigger: trig.current,
           toggleActions: "play reverse play reverse",
         },
       }
@@ -28,7 +28,7 @@ export const useGsapShutterUnveil = (item, delay = 0, trigger) => {
   }, []);
 };
 
-// Creating custom hook for navbar
+// Creating custom hook for animating navbar content
 export const useGsapDownStagger = (items, delay = 0) => {
   useEffect(() => {
     // creating element
@@ -48,6 +48,53 @@ export const useGsapDownStagger = (items, delay = 0) => {
         stagger: 0.1, // stagger delay:comes one after another
         ease: Expo.easeInOut, // timing function
         delay: delay,
+      }
+    );
+  }, []);
+};
+
+// Creating custom hook for dropping hero images
+export const useGsapPhotoDropping = (photos) => {
+  useEffect(() => {
+    const el = photos.map((photo) => photo.current);
+
+    gsap.fromTo(
+      el,
+      {
+        y: "-100vh",
+        scale: 0, // used in order to scale down photos
+      },
+      {
+        y: 0,
+        scale: 1, // used in order to scale up photos
+        duration: 2,
+        stagger: 0.2,
+        delay: 2.2,
+        ease: Expo.easeInOut,
+      }
+    );
+  }, []);
+};
+
+// Creating custom hook for levitating hero images(parallax effect)
+export const useGsapPhotoLevitate = (photos, trig) => {
+  useEffect(() => {
+    const el = photos.map((photo) => photo.current);
+
+    gsap.fromTo(
+      el,
+      {
+        y: 0,
+      },
+      {
+        y: "-30%",
+
+        ease: Expo.easeInOut,
+        scrollTrigger: {
+          trigger: trig.current,
+          scrub: 1,
+          toggleActions: "play reverse play reverse",
+        },
       }
     );
   }, []);
