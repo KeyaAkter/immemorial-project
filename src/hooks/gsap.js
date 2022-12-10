@@ -29,10 +29,10 @@ export const useGsapShutterUnveil = (item, delay = 0, trig) => {
 };
 
 // Creating custom hook for animating navbar content
-export const useGsapDownStagger = (items, delay = 0) => {
+export const useGsapDownStagger = (links, delay = 0) => {
   useEffect(() => {
     // creating element
-    const el = items.map((item) => item.current);
+    const el = links.map((link) => link.current);
 
     // creating twin
     gsap.fromTo(
@@ -100,7 +100,7 @@ export const useGsapPhotoLevitate = (photos, trig) => {
   }, []);
 };
 
-// Creating custom hook for animating featured left image
+// Creating custom hook for animating features left image
 
 export const useGsapFeatureLeftShutterUnveil = (item, trig) => {
   useEffect(() => {
@@ -126,7 +126,7 @@ export const useGsapFeatureLeftShutterUnveil = (item, trig) => {
   }, []);
 };
 
-// Creating custom hook for animating featured right image
+// Creating custom hook for animating features right image
 export const useGsapFeatureRightShutterUnveil = (item, trig) => {
   useEffect(() => {
     const el = item.current;

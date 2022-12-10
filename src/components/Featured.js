@@ -5,10 +5,12 @@ import {
 } from "../hooks/gsap";
 
 const Featured = () => {
+  // Creating Reference
   const featureRef = useRef(null);
   const featureLeftShutterRef = useRef(null);
   const featureRightShutterRef = useRef(null);
 
+  // Calling custom hooks for animating feature images
   useGsapFeatureLeftShutterUnveil(featureLeftShutterRef, featureRef);
   useGsapFeatureRightShutterUnveil(featureRightShutterRef, featureRef);
 

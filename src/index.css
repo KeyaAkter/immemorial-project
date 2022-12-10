@@ -51,7 +51,7 @@ body {
   margin: 0 5vw;
 }
 
-.section {
+section {
   padding: 10vw 0;
 }
 
@@ -232,4 +232,15 @@ body {
   right: 0;
   bottom: 0;
   background-color: var(--color-lighter);
+}
+
+/* ********************ABOUT STYLES******************** */
+
+.about p {
+  font-size: 3vw;
+  line-height: 1.5;
+}
+
+.about p:last-child {
+  margin-top: 3vw;
 }
