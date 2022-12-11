@@ -150,3 +150,86 @@ export const useGsapFeatureRightShutterUnveil = (item, trig) => {
     );
   }, []);
 };
+
+// Creating custom hook for animating gallery image
+export const useGsapGalleryImage = (image) => {
+  useEffect(() => {
+    const el = image.current;
+
+    gsap.fromTo(
+      el,
+      {
+        x: 0,
+        width: 0,
+      },
+      {
+        x: "30%",
+        width: "100%",
+        duration: 1,
+        ease: Expo.easeInOut,
+        scrollTrigger: {
+          trigger: el,
+          start: "top center",
+          end: "bottom top",
+          toggleActions: "play reverse play reverse",
+        },
+      }
+    );
+  }, []);
+};
+
+// Creating custom hook for animating gallery title
+export const useGsapGalleryTitle = (item, trig) => {
+  useEffect(() => {
+    const el = item.current;
+
+    gsap.fromTo(
+      el,
+      {
+        x: "30%",
+      },
+      {
+        x: 0,
+
+        duration: 1,
+        ease: Expo.easeInOut,
+        scrollTrigger: {
+          trigger: trig.current,
+          start: "top center",
+          end: "bottom top",
+          toggleActions: "play reverse play reverse",
+        },
+      }
+    );
+  }, []);
+};
+
+// Creating custom hook for animating gallery category
+export const useGsapGalleryCategory = (item, trig) => {
+  useEffect(() => {
+    const el = item.current;
+
+    gsap.fromTo(
+      el,
+      {
+        x: "-100vw",
+      },
+      {
+        x: 0,
+        duration: 1,
+        ease: Expo.easeInOut,
+        scrollTrigger: {
+          trigger: trig.current,
+          start: "top center",
+          end: "bottom top",
+          toggleActions: "play reverse play reverse",
+        },
+      }
+    );
+  }, []);
+};
+
+// Creating custom hook for animating footer headline
+export const useGsapFooterHeadline = (item, trig) => {
+  useEffect(() => {}, []);
+};
