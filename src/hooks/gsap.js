@@ -231,5 +231,23 @@ export const useGsapGalleryCategory = (item, trig) => {
 
 // Creating custom hook for animating footer headline
 export const useGsapFooterHeadline = (item, trig) => {
-  useEffect(() => {}, []);
+  useEffect(() => {
+    const el = item.current;
+
+    gsap.fromTo(
+      el,
+      {
+        y: "-100%",
+      },
+      {
+        y: 0,
+        duration: 1,
+        ease: Expo.easeInOut,
+        scrollTrigger: {
+          trigger: trig.current,
+          toggleActions: "play",
+        },
+      }
+    );
+  }, []);
 };

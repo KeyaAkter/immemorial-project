@@ -1,8 +1,13 @@
 import { useRef } from "react";
+import { useGsapFooterHeadline } from "../hooks/gsap";
 
 const Footer = () => {
+  // Creating reference
   const footerRef = useRef(null);
   const footerHeadlineRef = useRef(null);
+
+  // Calling custom hook
+  useGsapFooterHeadline(footerHeadlineRef, footerRef);
 
   return (
     <section ref={footerRef} className="footer wrapper">
