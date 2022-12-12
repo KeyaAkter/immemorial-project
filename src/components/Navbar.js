@@ -8,10 +8,10 @@ const Navbar = () => {
   const li2 = useRef(null);
   const li3 = useRef(null);
   const logoRef = useRef(null);
-  const favRef = useRef(null);
+  const blogRef = useRef(null);
 
   const liArr = [li1, li2, li3];
-  const favArr = [favRef];
+  const favArr = [blogRef];
   const logoArr = [logoRef];
 
   // Calling custom hooks
@@ -37,8 +37,8 @@ const Navbar = () => {
           <h2>Immemorial</h2>
         </Link>
       </div>
-      <div className="favourite-link" ref={favRef}>
-        <Link to="/favourites">Favourites</Link>
+      <div className="blog-link" ref={blogRef}>
+        <Link to="/blog">Blog</Link>
       </div>
     </nav>
   );

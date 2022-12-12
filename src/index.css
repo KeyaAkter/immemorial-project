@@ -85,18 +85,18 @@ section {
 }
 
 .links,
-.favourite-link {
+.blog-link {
   font-weight: 700;
 }
 
 .links a,
-.favourite-link a {
+.blog-link a {
   color: var(--color-dark);
   position: relative;
 }
 
 .links a::after,
-.favourite-link a::after {
+.blog-link a::after {
   content: "";
   width: 0%;
   height: 0.2rem;
@@ -109,7 +109,7 @@ section {
 }
 
 .links a:hover::after,
-.favourite-link a:hover::after {
+.blog-link a:hover::after {
   width: 120%;
 }
 
@@ -311,4 +311,45 @@ section {
   text-transform: lowercase;
   color: var(--color-primary);
   z-index: -1;
+}
+
+/* *****************NOT FOUND STYLES***************** */
+
+.not-found {
+  /* min-height: 100vh; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: flex-start;
+  column-gap: 5vw;
+  row-gap: 1vw;
+}
+
+.headline-1,
+.headline-2 {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 8vw;
+  font-weight: 700;
+  text-transform: capitalize;
+  line-height: 1;
+}
+
+.img-1,
+.img-2 {
+  width: 20vw;
+  height: 20vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.img-1 img,
+.img-2 img {
+  display: block;
+  width: 100%;
+}
+
+.img-2 {
+  justify-self: self-end;
 }

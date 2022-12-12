@@ -251,3 +251,45 @@ export const useGsapFooterHeadline = (item, trig) => {
     );
   }, []);
 };
+
+// Creating custom hook for animating the headline of not found page
+
+export const useGsapNotFoundHeadline = (item, vw = "-100vw") => {
+  useEffect(() => {
+    const el = item.current;
+
+    gsap.fromTo(
+      el,
+      {
+        x: vw,
+      },
+      {
+        x: 0,
+        duration: 1.5,
+        ease: Expo.easeInOut,
+      }
+    );
+  }, []);
+};
+
+// Creating custom hook for animating the headline of not found page
+
+export const useGsapNotFoundImg = (img) => {
+  useEffect(() => {
+    const el = img.current;
+    gsap.fromTo(
+      el,
+      {
+        scale: 0,
+        borderRadius: "50%",
+      },
+      {
+        scale: 1,
+        borderRadius: 0,
+        duration: 4,
+        delay: 1,
+        ease: "elastic",
+      }
+    );
+  }, []);
+};
