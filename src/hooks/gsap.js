@@ -293,3 +293,29 @@ export const useGsapNotFoundImg = (img) => {
     );
   }, []);
 };
+
+// custom hook
+
+export const useGsapBlogPhotoReveal = (img) => {
+  useEffect(() => {
+    const el = img.current;
+
+    gsap.fromTo(
+      el,
+      {
+        width: 0,
+      },
+      {
+        width: "100%",
+        duration: 2,
+        ease: Expo.easeInOut,
+        scrollTrigger: {
+          trigger: img.current,
+          toggleActions: "play reverse play reverse",
+        },
+      }
+    );
+  }, []);
+};
+
+// export const useGsapBlogTitleReveal = (item, trig);

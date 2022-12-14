@@ -316,7 +316,6 @@ section {
 /* *****************NOT FOUND STYLES***************** */
 
 .not-found {
-  /* min-height: 100vh; */
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-content: flex-start;
@@ -352,4 +351,108 @@ section {
 
 .img-2 {
   justify-self: self-end;
+}
+
+/* *********************BLOG STYLES********************* */
+
+.blog-wrapper {
+  display: grid;
+  grid-template-areas:
+    " a a d "
+    " b c d "
+    " e f f ";
+
+  gap: 5rem;
+}
+
+.blog-item:nth-child(1) {
+  grid-area: b;
+}
+
+.blog-item:nth-child(2) {
+  grid-area: d;
+}
+
+.blog-item:nth-child(3) {
+  grid-area: c;
+}
+
+.blog-item:nth-child(4) {
+  grid-area: e;
+}
+
+.blog-item:nth-child(5) {
+  grid-area: a;
+}
+
+.blog-item:nth-child(6) {
+  grid-area: f;
+}
+
+.blog-item {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.blog-title {
+  font-family: "Bodoni Moda", serif;
+  text-align: center;
+  color: aqua;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 7vw;
+  line-height: 1;
+  text-transform: uppercase;
+  height: fit-content;
+  letter-spacing: 10px;
+  margin-left: 20px;
+  margin-top: 20px;
+  transition: 0.5s;
+}
+
+.blog-item:nth-child(5) .blog-title {
+  left: 50%;
+  top: 55%;
+}
+
+.blog-item:nth-child(2) .blog-title {
+  right: 80%;
+  top: 60%;
+  transform: rotate(-90deg);
+}
+
+.blog-item:nth-child(3) .blog-title {
+  top: 35%;
+  transform: rotate(-45deg);
+}
+
+.blog-item:nth-child(4) .blog-title {
+  left: 55%;
+  top: 25%;
+  transform: translate(-50%, -50%);
+}
+
+.blog-item:nth-child(6) .blog-title {
+  left: 30%;
+  top: 40%;
+}
+
+.blog-title:hover {
+  color: var(--color-lighter);
+}
+
+.blog-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
