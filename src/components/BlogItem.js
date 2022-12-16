@@ -16,10 +16,12 @@ const BlogItem = ({ image }) => {
       <div ref={blogImgRef} className="blog-img">
         <img src={image.src} alt={image.title} />
       </div>
-      <h2 ref={blogTitleRef} className="blog-title">
-        {image.title}
-      </h2>
-      <p className="blog-description">{image.description}</p>
+      <div className="blog-texts">
+        <h2 ref={blogTitleRef} className="blog-title">
+          {image.title}
+        </h2>
+        {/* <p className="blog-description">{image.description}</p> */}
+      </div>
     </div>
   );
 };

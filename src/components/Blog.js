@@ -44,16 +44,51 @@ const images = [
     description:
       "The Sega Mega Drive is to games consoles in the 90s as George Best was to football 30 year previously. Video gaming and football were obviously around before them but once they appeared on the scene the future would change forever.",
   },
+
+  {
+    id: 7,
+    src: "https://images.pexels.com/photos/11795116/pexels-photo-11795116.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    title: "Swing",
+    description:
+      "Most of the girls are in love with swings irrespective of their age. Swinging in a swing makes them happy and gives them a peaceful feeling. Swinging just makes each of us calm and happy.",
+  },
+  {
+    id: 8,
+    src: "https://images.pexels.com/photos/9067719/pexels-photo-9067719.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    title: "Cricket",
+    description:
+      "The only childhood play, every bengali boy inherits as a child is Cricket.After Asr prayer, every boy would leave the house to play cricket. First they all divided into two teams, then tossed which team would bat first. Then they started playing.Sometimes there would be prizes for the winning team which added to the fun of the game.",
+  },
+  {
+    id: 9,
+    src: "https://images.unsplash.com/photo-1600077063877-22118d6290eb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    title: "Football",
+    description:
+      "All the boys loved to play football during monsoons. They had more fun playing football in the rain. After playing football in the rain, they all bathed together in the pond and returned home.",
+  },
+  {
+    id: 10,
+    src: "https://images.pexels.com/photos/10347115/pexels-photo-10347115.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    title: "Kabaddi",
+    description:
+      "Kabaddi is a form of bengali wrestling.The sport not only rekindles childhood memories, but also it is easy to observe people narrate their kabaddi stories every time there is a discussion on Pro Kabaddi or World Kabaddi League. Be it of getting ones t-shirt torn or beating up the high school bully. There is always a story of a lesser popular David and Goliath in that.",
+  },
+
+  {
+    id: 11,
+    src: "https://www.thesun.co.uk/wp-content/uploads/2022/09/LM_slapbracelet_offplat.jpg?strip=all&quality=100&w=1920&h=1080&crop=1",
+    title: "Slap Bracelet",
+    description:
+      "The slap bracelet had two faces. It wasn't just a toy that could be extended and reformed, it was a serious fashion statement — perfect for kids on the cusp of childhood and adulthood, standing between the pre- and post-Internet eras. '90s kids liked their toys fashionable and their fashion playful, and slap bracelets gave them exactly that.",
+  },
   // {
-  //   id: 6,
-  //   src: "https://www.thesun.co.uk/wp-content/uploads/2022/09/LM_slapbracelet_offplat.jpg?strip=all&quality=100&w=1920&h=1080&crop=1",
-  //   title: "Slap Bracelet",
+  //   id: 12,
+  //   src: "https://images.pexels.com/photos/3109671/pexels-photo-3109671.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  //   title: "Load-shedding",
   //   description:
-  //     "The slap bracelet had two faces. It wasn't just a toy that could be extended and reformed, it was a serious fashion statement — perfect for kids on the cusp of childhood and adulthood, standing between the pre- and post-Internet eras. '90s kids liked their toys fashionable and their fashion playful, and slap bracelets gave them exactly that.",
+  //     "At one time in Bangladesh there were many problems of load shedding. Every evening the electricity went out. When the electricity went out, all the children would go out of the house. They used to talk together, have fun, play together. But now these things are not seen anymore.",
   // },
 ];
-
-// const title = images.map((image) => image.title);
 
 const Blog = ({ needFullHeight }) => {
   return (
@@ -62,11 +97,11 @@ const Blog = ({ needFullHeight }) => {
     >
       <h2 className="section-title">Blog</h2>
 
-      {/* <div className="blog-wrapper">
+      <div className="blog-wrapper">
         {images.map((image) => (
           <BlogItem key={image.id} image={image} />
         ))}
-      </div> */}
+      </div>
     </section>
   );
 };
